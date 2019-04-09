@@ -1,8 +1,10 @@
 package com.midtermmad3125.ui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.widget.TextView;
 
 import com.midtermmad3125.Modal.Weather;
 import com.midtermmad3125.R;
@@ -21,12 +23,29 @@ import java.util.List;
 public class WeatherListActivity extends AppCompatActivity {
     private List WeatherList = new ArrayList<>();
     private RecyclerView recycle1;
+    private TextView date;
+    private TextView Min;
+    private TextView Max;
+    private TextView descript;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_list);
+
+        date = findViewById(R.id.date);
+        Min = findViewById(R.id.Min);
+        Max = findViewById(R.id.Max);
+        descript = findViewById(R.id.descript);
+
+        Intent mIntent = new Intent(WeatherListActivity.this,WeatherDetailsActivity.class);
+        startActivity(mIntent);
+
+
+
+
+
     }
 
 
