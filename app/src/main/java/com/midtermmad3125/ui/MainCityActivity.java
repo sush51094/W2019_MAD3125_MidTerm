@@ -9,9 +9,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.midtermmad3125.R;
+import com.midtermmad3125.utils.ReadJSONUtils;
 
-public class MainCityActivity extends AppCompatActivity
-{
+import org.json.JSONObject;
+
+public class MainCityActivity extends AppCompatActivity {
     private TextView cname;
     private TextView latitude;
     private TextView longitude;
@@ -31,19 +33,16 @@ public class MainCityActivity extends AppCompatActivity
         population = findViewById(R.id.population);
         Next = findViewById(R.id.btnNext);
 
-Next.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(MainCityActivity.this,WeatherListActivity.class);
-        startActivity(intent);
 
+        Next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainCityActivity.this, WeatherListActivity.class);
+                startActivity(intent);
 
-    }
-});
+            }
 
-
-
-
+        });
 
 
     }
